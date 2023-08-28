@@ -1,9 +1,21 @@
 function addTodo(event) {
-  const li = document.createElement('li');
-  const span = document.createElement('span');
-  li.appendChild(span);
-  span.innerText = addValue.value;
+  const div = document.createElement('div');
+  const p = document.createElement('p');
+  const input = document.createElement('input');
+
+  input.id = 'checkBox';
+  input.className = 'check-box';
+  input.setAttribute('type', 'checkbox');
+  console.log(input);
+  div.appendChild(input);
+
+  p.innerText = addValue.value;
   addValue.value = '';
-  console.log(li);
-  toDO.appendChild(li);
+  p.className = 'list-content';
+  p.id = 'list-content';
+  div.appendChild(p);
+  div.className = 'list';
+  console.log(div);
+  console.log(p);
+  toDO.appendChild(div);
 }

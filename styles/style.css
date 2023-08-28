@@ -41,3 +41,11 @@ body {
 .add-to-do-btn:active {
   color: black;
 }
+
+.list-container {
+  margin-top: 10px;
+}
+
+.list {
+  display: flex;
+}
