@@ -33,7 +33,7 @@ body {
   width: 90%;
   height: 40px;
   padding-left: 10px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .add-to-do-btn {
@@ -41,15 +41,11 @@ body {
   height: 40px;
   margin-left: 10px;
   color: white;
-  font-size: 20px;
+  font-size: 21px;
 
   background-color: #b29eb9;
   border-radius: 20px;
   cursor: pointer;
-}
-
-.add-to-do-btn:active {
-  color: black;
 }
 
 .list-container {
@@ -59,9 +55,9 @@ body {
 .todo-list-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 90%;
   padding: 10px;
-  align-items: center;
   border-bottom: 1px dashed #c2adbc;
   margin-top: 3px;
 }
@@ -69,13 +65,13 @@ body {
 .list-content {
   color: black;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .checked-list-content {
   color: grey;
   text-decoration: line-through;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .check-box {
@@ -95,4 +91,16 @@ input[type='checkbox'] {
 input[type='checkbox']:checked {
   background: #b29eb9;
   border: none;
+}
+
+.list-edit-btn,
+.list-delete-btn {
+  background-color: white;
+  border: none;
+}
+
+.btnImage {
+  width: 23px;
+  filter: invert(17%) sepia(21%) saturate(2048%) hue-rotate(209deg)
+    brightness(92%) contrast(96%);
 }

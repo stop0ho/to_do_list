@@ -35,22 +35,28 @@ function makeCheckBox() {
 }
 
 function makeDeleteButton() {
-  button = document.createElement('button');
-  button.innerText = 'X';
+  const button = document.createElement('button');
+  const img = new Image();
+  img.src = './assets/delete.png';
+  img.className = 'btnImage';
+  button.appendChild(img);
   button.setAttribute('type', 'button');
   button.setAttribute('onClick', 'deleteItem()');
   button.className = 'list-delete-btn';
-  button.id = 'list-delete-btn';
+  button.id = 'listDeleteBtn';
   return button;
 }
 
 function makeEditButton() {
-  button = document.createElement('button');
-  button.innerText = '편집';
+  const button = document.createElement('button');
+  const img = new Image();
+  img.src = './assets/edit.png';
+  img.className = 'btnImage';
+  button.appendChild(img);
   button.setAttribute('type', 'button');
   button.setAttribute('onClick', 'editItem()');
   button.className = 'list-edit-btn';
-  button.id = 'list-edit-btn';
+  button.id = 'listEditBtn';
   return button;
 }
 
