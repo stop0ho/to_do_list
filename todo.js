@@ -1,7 +1,8 @@
 function addTodo(event) {
   const div = document.createElement('div');
-  const p = document.createElement('p');
+  const span = document.createElement('span');
   const input = document.createElement('input');
+  const button = document.createElement('button');
 
   input.id = 'checkBox';
   input.className = 'check-box';
@@ -9,13 +10,23 @@ function addTodo(event) {
   console.log(input);
   div.appendChild(input);
 
-  p.innerText = addValue.value;
+  span.innerText = addValue.value;
   addValue.value = '';
-  p.className = 'list-content';
-  p.id = 'list-content';
-  div.appendChild(p);
+  span.className = 'list-content';
+  span.id = 'list-content';
+  div.appendChild(span);
+
+  button.innerText = 'X';
+  button.setAttribute('type', 'button');
+  button.setAttribute('onClick', 'deleteItem()');
+  button.className = 'list-btn';
+  button.id = 'list-btn';
+  div.appendChild(button);
+
   div.className = 'list';
   console.log(div);
-  console.log(p);
+  console.log(span);
   toDO.appendChild(div);
 }
+
+function deleteItem(event) {}
