@@ -4,6 +4,18 @@ function makeDiv() {
   return div;
 }
 
+function makeLeftDiv() {
+  const div = document.createElement('div');
+  div.className = 'todo-list-container-left';
+  return div;
+}
+
+function makeRightDiv() {
+  const div = document.createElement('div');
+  div.className = 'todo-list-container-right';
+  return div;
+}
+
 function makeSpan() {
   const span = document.createElement('span');
   span.innerText = addValue.value;
@@ -52,20 +64,25 @@ function isChecked() {
 }
 
 function addTodo(event) {
-  const div = makeDiv();
-  const span = makeSpan();
-  const input = makeCheckBox();
-  const deleteBtn = makeDeleteButton();
-  const editBtn = makeEditButton();
+  if (addValue.value != false) {
+    const div = makeDiv();
+    const rightDiv = makeRightDiv();
+    const leftDiv = makeLeftDiv();
+    const content = makeSpan();
+    const checkBox = makeCheckBox();
+    const deleteBtn = makeDeleteButton();
+    const editBtn = makeEditButton();
 
-  div.appendChild(input);
-  div.appendChild(span);
-  div.appendChild(editBtn);
-  div.appendChild(deleteBtn);
+    leftDiv.appendChild(checkBox);
+    leftDiv.appendChild(content);
+    rightDiv.appendChild(editBtn);
+    rightDiv.appendChild(deleteBtn);
+    div.appendChild(leftDiv);
+    div.appendChild(rightDiv);
 
-  console.log(div);
-  console.log(span);
-  toDO.appendChild(div);
+    console.log(div);
+    toDO.appendChild(div);
+  }
 }
 
 function deleteItem(event) {
