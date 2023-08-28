@@ -10,17 +10,25 @@
     <div class="to-do-container">
       <div class="add-to-do-container">
         <input
-          type="text"
           id="addValue"
+          type="text"
           placeholder="할 일 추가하기"
           autofocus
           class="add-to-do-input"
+          required
         />
-        <button type="button" onclick="addTodo()" class="add-to-do-btn">
+        <button
+          type="button"
+          onclick="addTodo()"
+          class="add-to-do-btn"
+          id="addBtn"
+        >
           ✚
         </button>
       </div>
-      <div class="list-container"></div>
+      <div class="list-container" id='toDO'></div>
+      </div>
     </div>
+    <script src="todo.js"></script>
   </body>
 </html>
