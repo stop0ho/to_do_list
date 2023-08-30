@@ -24,17 +24,18 @@ function makeCheckBox() {
   input.id = 'checkBox';
   input.className = 'check-box';
   input.setAttribute('type', 'checkbox');
-  input.setAttribute('onClick', 'isChecked()');
+  input.addEventListener('click', isChecked);
   return input;
 }
 
 function isChecked(event) {
-  const isCheck = checkBox.checked;
-  console.log('checked');
+  const isCheck = event.target.checked;
+  const span = event.target.parentElement.children[1];
+  console.log(span);
   if (isCheck == true) {
-    listContent.className = 'checked-list-content';
+    span.className = 'checked-list-content';
   } else {
-    listContent.className = 'list-content';
+    span.className = 'list-content';
   }
 }
 
