@@ -55,11 +55,6 @@ body {
 .todo-list-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  padding: 10px;
-  border-bottom: 1px dashed #c2adbc;
-  margin-top: 3px;
 }
 
 .list-content {
@@ -99,8 +94,12 @@ input[type='checkbox']:checked {
   border: none;
 }
 
-.btnImage {
-  width: 23px;
-  filter: invert(17%) sepia(21%) saturate(2048%) hue-rotate(209deg)
-    brightness(92%) contrast(96%);
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 10px;
+  border-bottom: 1px dashed #c2adbc;
+  margin-top: 3px;
 }
