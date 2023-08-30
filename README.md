@@ -1,8 +1,10 @@
 # 자바스크립트로 to do list 만들기
 
+## [페이지로 이동](https://stop0ho.github.io/to_do_list/)
+
 ### 📸 미리보기
 
-![image](https://github.com/stop0ho/to_do_list/assets/68852637/a71ef38f-5b5b-4417-99cb-926e6efe5f21)
+<img width="697" alt="image" src="https://github.com/stop0ho/to_do_list/assets/68852637/5a816b76-bae6-4698-8c92-1fab93af46f1">
 
 ### 💖 기능소개
 

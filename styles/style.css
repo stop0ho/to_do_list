@@ -11,6 +11,15 @@ body {
   font-family: 'GyeonggiBatang';
 }
 
+.main-title {
+  font-size: 58px;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 70px;
+  text-shadow: 5px 2px 2px grey;
+}
+
 .to-do-container {
   position: relative;
   background-color: white;
@@ -19,6 +28,7 @@ body {
   left: 17%;
   height: 600px;
   padding: 20px;
+  box-shadow: 5px 5px 5px grey;
 }
 
 .add-to-do-container {
