@@ -34,32 +34,6 @@ function makeCheckBox() {
   return input;
 }
 
-function makeDeleteButton() {
-  const button = document.createElement('button');
-  const img = new Image();
-  img.src = './assets/delete.png';
-  img.className = 'btnImage';
-  button.appendChild(img);
-  button.setAttribute('type', 'button');
-  button.setAttribute('onClick', 'deleteItem()');
-  button.className = 'list-delete-btn';
-  button.id = 'listDeleteBtn';
-  return button;
-}
-
-function makeEditButton() {
-  const button = document.createElement('button');
-  const img = new Image();
-  img.src = './assets/edit.png';
-  img.className = 'btnImage';
-  button.appendChild(img);
-  button.setAttribute('type', 'button');
-  button.setAttribute('onClick', 'editItem()');
-  button.className = 'list-edit-btn';
-  button.id = 'listEditBtn';
-  return button;
-}
-
 function isChecked() {
   const isCheck = checkBox.checked;
   if (isCheck == true) {
@@ -69,32 +43,52 @@ function isChecked() {
   }
 }
 
-function addTodo(event) {
-  if (addValue.value != false) {
-    const div = makeDiv();
-    const rightDiv = makeRightDiv();
-    const leftDiv = makeLeftDiv();
-    const content = makeSpan();
-    const checkBox = makeCheckBox();
-    const deleteBtn = makeDeleteButton();
-    const editBtn = makeEditButton();
+function paintToDo(newTodo) {
+  const li = document.createElement('li');
+  const span = document.createElement('span');
+  span.innerText = newTodo;
+  const deleteBtn = document.createElement('button');
+  deleteBtn.innerText = '❌';
+  // const img = new Image();
+  // img.src = './assets/delete.png';
+  // img.className = 'btnImage';
+  // deleteBtn.appendChild(img);
+  deleteBtn.className = 'list-delete-btn';
+  deleteBtn.addEventListener('click', deleteItem);
 
-    leftDiv.appendChild(checkBox);
-    leftDiv.appendChild(content);
-    rightDiv.appendChild(editBtn);
-    rightDiv.appendChild(deleteBtn);
-    div.appendChild(leftDiv);
-    div.appendChild(rightDiv);
-
-    console.log(div);
-    toDO.appendChild(div);
-  }
+  li.appendChild(span);
+  li.appendChild(deleteBtn);
+  todoList.appendChild(li);
 }
 
 function deleteItem(event) {
-  console.log('delete');
+  const li = event.target.parentElement;
+  li.remove();
 }
 
-function editItem(event) {
-  console.log('edit');
+
+function addTodo(event) {
+  if (addValue.value != false) {
+    const newTodo = addValue.value;
+    addValue.value = '';
+    paintToDo(newTodo);
+
+    // const div = makeDiv();
+    // const rightDiv = makeRightDiv();
+    // const leftDiv = makeLeftDiv();
+    // const content = makeSpan();
+    // const checkBox = makeCheckBox();
+    // const deleteBtn = makeDeleteButton();
+    // const editBtn = makeEditButton();
+
+    // leftDiv.appendChild(checkBox);
+    // leftDiv.appendChild(content);
+    // rightDiv.appendChild(editBtn);
+    // rightDiv.appendChild(deleteBtn);
+    // div.appendChild(leftDiv);
+    // div.appendChild(rightDiv);
+
+    // console.log(div);
+    // toDO.appendChild(div);
+  }
 }
