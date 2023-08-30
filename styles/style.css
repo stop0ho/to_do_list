@@ -90,8 +90,14 @@ input[type='checkbox']:checked {
 
 .list-edit-btn,
 .list-delete-btn {
-  background-color: white;
+  background-color: #b29eb9;
   border: none;
+  width: 25px;
+  height: 25px;
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  text-align: center;
 }
 
 li {
